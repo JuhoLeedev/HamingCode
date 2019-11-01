@@ -1,5 +1,8 @@
-import java.awt.EventQueue;
+/*
+ * 12161640 이주호
+ * */
 
+import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
@@ -53,6 +56,7 @@ public class Hamming {
 		return ar;
 	}
 
+	// checking received data's parity bits
 	static ArrayList<Integer> checkHamming(int[] ar, int r) {
 		ArrayList<Integer> list = new ArrayList<>();
 		for (int i = 0; i < r; i++) {
@@ -64,7 +68,6 @@ public class Hamming {
 				}
 			}
 			list.add(n);
-			// System.out.println("r" + x + " = " + ar[x]);
 		}
 
 		return list;
@@ -198,7 +201,7 @@ public class Hamming {
 				}
 				int[] ar = generateCode(str, M, r);
 
-				System.out.println("Generated hamming code ");
+				//System.out.println("Generated hamming code ");
 				ar = calculation(ar, r);
 				String result = "[";
 				int cnt = 0;
